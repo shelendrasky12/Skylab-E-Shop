@@ -14,6 +14,7 @@ export const AppContextProvider = ({ children }) => {
     const [showUserLogin,setShowUserLogin] = useState(false)
     const [products,setProducts] =useState([])
     const [cartItems,setCartItems] = useState({})
+    const [searchQuery,setSearchQuery] = useState({})
     
     //fetch products from dummy data
     const fetchProducts = async () => {
@@ -60,7 +61,7 @@ export const AppContextProvider = ({ children }) => {
 
     // const currency = import.meta.env.VITE.CURRENCY
 
-    const value = { navigate, user, setUser, IsSeller, setIsSeller,showUserLogin, setShowUserLogin,products,cartItems,addToCart,updatecartItem,removeCartItem}
+    const value = { navigate, user, setUser, IsSeller, setIsSeller,showUserLogin, setShowUserLogin,products,cartItems,addToCart,updatecartItem,removeCartItem,searchQuery,setSearchQuery}
 
     return <AppContext.Provider value={value}>
         {children}
